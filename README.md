@@ -8,3 +8,5 @@ Caça ao tesouro é um jogo no qual organizadores preparam uma lista definindo i
 2. [Anna Carollyne](https://github.com/2carol)
 3. [Diego Cruz](https://github.com/DiegoCruzz)
 4. [Ivan Nascimento](https://github.com/IvanNascimento)
+
+# Tech Stack
