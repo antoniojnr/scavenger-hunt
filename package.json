@@ -1,0 +1,29 @@
+{
+  "name": "scavenger-hunt",
+  "version": "1.0.0",
+  "description": "Um jogo de caça ao tesouro.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/antoniojnr/scavenger-hunt.git"
+  },
+  "keywords": [
+    "scavenger-hunt",
+    "android",
+    "api",
+    "webservice",
+    "nodejs"
+  ],
+  "author": "@antoniojnr, @2carol, @DiegoCruzz, @IvanNascimento",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/antoniojnr/scavenger-hunt/issues"
+  },
+  "homepage": "https://github.com/antoniojnr/scavenger-hunt#readme",
+  "dependencies": {
+    "express": "^4.15.4"
+  }
+}
