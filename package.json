@@ -23,7 +23,5 @@
     "url": "https://github.com/antoniojnr/scavenger-hunt/issues"
   },
   "homepage": "https://github.com/antoniojnr/scavenger-hunt#readme",
-  "dependencies": {
-    "express": "^4.15.4"
-  }
+  "dependencies": {}
 }
