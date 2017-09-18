@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Welcome to Firebase Hosting</title>
 
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.4/angular-material.min.css">
+    <link rel="stylesheet" href="resources/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles/styles.css">
     <!-- update the version number as needed -->
     <script defer src="/__/firebase/4.3.1/firebase-app.js"></script>
     <!-- include only the Firebase features as you need -->
@@ -14,10 +17,99 @@
     <script defer src="/__/firebase/4.3.1/firebase-storage.js"></script>
     <!-- initialize the SDK after all desired features are loaded -->
     <script defer src="/__/firebase/init.js"></script>
-    <script defer src="scripts/app.js" charset="utf-8"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular-animate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular-aria.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular-messages.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.4/angular-material.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular-route.min.js"></script>
+    <script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
+    <script src="app/app.module.js" charset="utf-8"></script>
+    <script src="app/groups/groups.controller.js" charset="utf-8"></script>
+    <script src="app/main.controller.js" charset="utf-8"></script>
   </head>
-  <body>
-    <span id="loggedUser">Faça login</span>
-    <button id="login" type="button" name="button">Login</button>
+  <body layout="column" ng-app="scavenger-hunt" ng-controller="MainController as c" ng-cloak>
+    <md-toolbar class="md-hue-2">
+      <div class="md-toolbar-tools">
+        <md-button class="md-icon-button md-primary"
+          ng-show="c.loggedIn"
+          ng-click="c.openSidenav()" aria-label="Menu">
+         <md-icon md-svg-icon="img/menu_48.svg"></md-icon>
+        </md-button>
+
+        <h1 flex md-truncate>Caça ao Tesouro</h1>
+      </div>
+    </md-toolbar>
+    <div class="container" layout="row" flex>
+      <md-sidenav
+        md-component-id="navBar"
+        class="md-whiteframe-4dp" flex>
+        <md-toolbar class="md-theme-light"
+          md-scroll-shrink
+          layout-align="center center" layout="row">
+          <h2 class="md-toolbar-tools">Menu</h2>
+          <div>
+            <md-button class="md-icon-button md-primary"
+              ng-click="c.closeSidenav()" aria-label="Fechar">
+              <md-icon md-svg-icon="img/close.svg"></md-icon>
+            </md-button>
+          </div>
+        </md-toolbar>
+        <md-content layout-padding layout="column">
+          <md-card>
+            <md-card-header>
+              <md-card-avatar>
+                <img class="md-user-avatar" ng-src="{{c.photoUrl}}">
+              </md-card-avatar>
+              <md-card-header-text>
+                <span class="md-title">{{c.userName}}</span>
+                <span class="md-subhead">{{c.email}}</span>
+              </md-card-header-text>
+            </md-card-header>
+          </md-card>
+          <md-list flex>
+            <md-list-item class="md-2-line" ng-click="null">
+              <div class="md-avatar">
+                <i class="fa fa-map-o fa-2x" aria-hidden="true"></i>
+              </div>
+              <div class="md-list-item-text" layout="column">
+                <h3>Meus jogos</h3>
+                <p>Notes</p>
+              </div>
+            </md-list-item>
+            <md-list-item class="md-2-line" ng-click="null">
+              <div class="md-avatar">
+                <i class="fa fa-users fa-2x" aria-hidden="true"></i>
+              </div>
+              <div class="md-list-item-text" layout="column">
+                <h3>Meus grupos</h3>
+                <p>Notes</p>
+              </div>
+            </md-list-item>
+            <md-list-item class="md-2-line" ng-click="null">
+              <div class="md-avatar">
+                <i class="fa fa-trophy fa-2x" aria-hidden="true"></i>
+              </div>
+              <div class="md-list-item-text" layout="column">
+                <h3>Rankings</h3>
+                <p>Notes</p>
+              </div>
+            </md-list-item>
+            <md-list-item class="md-1-line" ng-click="c.signOut()" ng-show="c.loggedIn">
+              <div class="md-avatar">
+                <i class="fa fa-sign-out fa-2x" aria-hidden="true"></i>
+              </div>
+              <div class="md-list-item-text" layout="column">
+                <h3>Sair</h3>
+              </div>
+            </md-list-item>
+          </md-list>
+        </md-content>
+      </md-sidenav>
+      <md-content ng-view flex>
+
+      </md-content>
+    </div>
+  </md-content>
   </body>
 </html>

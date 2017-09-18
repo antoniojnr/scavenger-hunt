@@ -23,5 +23,14 @@
     "url": "https://github.com/antoniojnr/scavenger-hunt/issues"
   },
   "homepage": "https://github.com/antoniojnr/scavenger-hunt#readme",
-  "dependencies": {}
+  "dependencies": {
+    "@angular/router": "^4.3.6",
+    "angular": "^1.6.6",
+    "angular-animate": "^1.6.6",
+    "angular-aria": "^1.6.6",
+    "angular-material": "^1.1.5",
+    "angular-messages": "^1.6.6",
+    "angularfire": "^2.3.0",
+    "material-components-web": "^0.20.0"
+  }
 }

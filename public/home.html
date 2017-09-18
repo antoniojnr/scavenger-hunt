@@ -1,0 +1,83 @@
+<div flex-xs layout="line" layout-align="center center" ng-controller="MainController as d">
+  <div flex-xs flex-gt-xs="50" layout="column">
+    <md-card>
+      <md-card-header>
+        <md-card-avatar>
+          <i class="fa fa-map-o fa-2x" aria-hidden="true"></i>
+        </md-card-avatar>
+        <md-card-header-text>
+          <span class="md-title">Jogos</span>
+          <span class="md-subhead">... jogos</span>
+        </md-card-header-text>
+      </md-card-header>
+      <md-card-content>
+        <md-list flex>
+          <md-list-item class="md-3-line" ng-click="null">
+            <div class="md-avatar">
+              <i class="fa fa-users fa-2x" aria-hidden="true"></i>
+            </div>
+            <div class="md-list-item-text" layout="column">
+              <h3>Grupo bla</h3>
+              <h4>Descrição</h4>
+              <p>30 membros</p>
+            </div>
+          </md-list-item>
+          <md-list-item class="md-3-line" ng-click="null">
+            <div class="md-avatar">
+              <i class="fa fa-users fa-2x" aria-hidden="true"></i>
+            </div>
+            <div class="md-list-item-text" layout="column">
+              <h3>Grupo bla</h3>
+              <h4>Descrição</h4>
+              <p>30 membros</p>
+            </div>
+          </md-list-item>
+          <md-list-item class="md-3-line" ng-click="null">
+            <div class="md-avatar">
+              <i class="fa fa-users fa-2x" aria-hidden="true"></i>
+            </div>
+            <div class="md-list-item-text" layout="column">
+              <h3>Grupo bla</h3>
+              <h4>Descrição</h4>
+              <p>30 membros</p>
+            </div>
+          </md-list-item>
+        </md-list>
+      </md-card-content>
+      <md-card-actions layout="row" layout-align="start center">
+        <md-button>Criar novo</md-button>
+        <md-button>Entrar</md-button>
+      </md-card-actions>
+    </md-card>
+  </div>
+  <div flex-xs flex-gt-xs="50" layout="column" ng-controller="GroupsController as g">
+    <md-card>
+      <md-card-header>
+        <md-card-avatar>
+          <i class="fa fa-users fa-2x" aria-hidden="true"></i>
+        </md-card-avatar>
+        <md-card-header-text>
+          <span class="md-title">Grupos</span>
+          <span class="md-subhead">... grupos</span>
+        </md-card-header-text>
+      </md-card-header>
+      <md-card-content>
+        <md-list flex>
+          <md-list-item class="md-3-line" ng-click="null" ng-repeat="group in g.groups">
+            <div class="md-avatar">
+              <i class="fa fa-users fa-2x" aria-hidden="true"></i>
+            </div>
+            <div class="md-list-item-text" layout="column">
+              <h3>{{group.name}}</h3>
+              <h4>{{group.description}}</h4>
+              <p>... membros</p>
+            </div>
+          </md-list-item>
+        </md-list>
+      </md-card-content>
+      <md-card-actions layout="row" layout-align="start center">
+        <md-button ng-click="g.createGroup($event)">Criar novo</md-button>
+      </md-card-actions>
+    </md-card>
+  </div>
+</div>
