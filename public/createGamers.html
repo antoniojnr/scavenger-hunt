@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html class="mdc-typography">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Welcome to Firebase Hosting</title>
+
+    <link type="text/css" href="node_modules/material-components-web/dist/material-components-web.css">
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/4.3.1/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/4.3.1/firebase-auth.js"></script>
+    <script defer src="/__/firebase/4.3.1/firebase-database.js"></script>
+    <script defer src="/__/firebase/4.3.1/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/4.3.1/firebase-storage.js"></script>
+    <!-- initialize the SDK after all desired features are loaded -->
+    <script defer src="/__/firebase/init.js"></script>
+    <script defer src="scripts/app.js" charset="utf-8"></script>
+    <script defer src="scripts/gamer.js" charset="utf-8"></script>
+
+  </head>
+  <body>
+    <h2 class="mdc-typography--display2">Hello, Material Components!</h2>
+    <div class="mdc-textfield" data-mdc-auto-init="MDCTextfield">
+      <input type="text" class="mdc-textfield__input" id="demo-input">
+      <label for="demo-input" class="mdc-textfield__label">Tell us how you feel!</label>
+    </div>
+    <span id="loggedUser">Faça login</span>
+    <button id="login" type="button" name="button">Login</button>
+    <div class="">
+      <form class="" action="index.html" method="post">
+        <input id="name" type="text" name="name">
+        <input id="description" type="text" name="description">
+        <span>Senha: ...</span>
+        <span>Participantes: ...</span>
+        <button id="createGroup" type="submit" name="button">Criar</button>
+      </form>
+    </div>
+    <script charset="utf-8" src="node_modules/material-components-web/dist/material-components-web.js"></script>
+    <script >mdc.autoInit()</script>
+  </body>
+</html>
