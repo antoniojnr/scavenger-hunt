@@ -1,5 +1,5 @@
 <div flex-xs layout="line" layout-align="center center" ng-controller="MainController as d">
-  <div flex-xs flex-gt-xs="50" layout="column" mg-controller="GamersController as h">
+  <div flex-xs flex-gt-xs="50" layout="column" ng-controller="GamesController as h">
     <md-card>
       <md-card-header>
         <md-card-avatar>
@@ -11,14 +11,14 @@
 
         </md-card-header-text>
       </md-card-header>
-      <md-card-content>
+      <md-card-content style="height: 250px; overflow-y: auto">
         <md-list flex>
           <md-list-item class="md-3-line" ng-click="null">
             <div class="md-avatar">
               <i class="fa fa-users fa-2x" aria-hidden="true"></i>
             </div>
             <div class="md-list-item-text" layout="column">
-              <h3>Grupo bla</h3>
+              <h3>Grupo blas</h3>
               <h4>Descrição</h4>
               <p>30 membros</p>
             </div>
@@ -62,7 +62,7 @@
           <span class="md-subhead">... grupos</span>
         </md-card-header-text>
       </md-card-header>
-      <md-card-content>
+      <md-card-content style="height: 250px; overflow-y: auto">
         <md-list flex>
           <md-list-item class="md-3-line" ng-click="null" ng-repeat="group in g.groups">
             <div class="md-avatar">

@@ -255,3 +255,8 @@
 .yahoo:hover {
   background-color: #9412cd !important;
 }
+
+.scrollable {
+  height: 250px;
+  overflow-y: auto;
+}

@@ -54,7 +54,7 @@ function GroupsController($scope, $mdDialog, $firebaseArray) {
       templateUrl: 'app/groups/new_group.tmpl.html',
       parent: angular.element(document.body),
       targetEvent: ev,
-      clickOutsideToClose:true,
+      clickOutsideToClose:false,
       fullscreen: $scope.customFullscreen
     })
     .then(function(answer) {
