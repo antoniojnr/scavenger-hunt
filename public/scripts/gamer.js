@@ -2,21 +2,21 @@ var database = firebase.database();
 var auth = firebase.auth();
 
 window.onload = function() {
-  document.getElementById('createGamer').onclick = create;
+  document.getElementById('createGame').onclick = create;
 };
 
 function create(e) {
   e.preventDefault();
 
-  var gamerName = document.getElementById('name');
-  var gamerDescription = document.getElementById('description');
+  var gameName = document.getElementById('name');
+  var gameDescription = document.getElementById('description');
   var currentUser = auth.currentUser;
-  var gamersRef = database.ref('gamers');
+  var gamesRef = database.ref('games');
 
   // Add a new message entry to the Firebase Database.
-  gamersRef.push({
-    name: gamerName.value,
-    description: gamerDescription.value
+  gamesRef.push({
+    name: gameName.value,
+    description: gameDescription.value
   }).then(function() {
     console.log("Jogo cadastrado");
   }.bind(this)).catch(function(error) {

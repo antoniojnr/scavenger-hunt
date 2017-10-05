@@ -2,7 +2,7 @@
   <form ng-cloak>
     <md-toolbar>
       <div class="md-toolbar-tools">
-        <h2>New gamer</h2>
+        <h2>New game</h2>
         <span flex></span>
         <md-button class="md-icon-button" ng-click="g.cancel()">
           <md-icon md-svg-src="img/close.svg" aria-label="Fechar caixa de diálogo"></md-icon>
@@ -13,18 +13,22 @@
     <md-dialog-content flex>
       <div class="md-dialog-content" layout="column" layout-align="start">
         <md-input-container flex>
-          <label>Nome</label>
-          <input required type="text" ng-model="g.name">
+          <label>Nome do Game Master</label>
+          <input required type="text" ng-model="game.namex">
+        </md-input-container>
+        <md-input-container flex>
+          <label>Nome do jogo</label>
+          <input required type="text" ng-model="game.name">
         </md-input-container>
         <md-input-container flex>
           <label>Descrição</label>
-          <input required type="text" ng-model="g.description">
+          <input required type="text" ng-model="game.description">
         </md-input-container>
       </div>
     </md-dialog-content>
 
     <md-dialog-actions layout="row">
-      <md-button ng-click="g.save(gamer)">
+      <md-button ng-click="g.save(game)">
         Salvar
       </md-button>
       <md-button>

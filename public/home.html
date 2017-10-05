@@ -23,7 +23,7 @@
               <p>30 membros</p>
             </div>
           </md-list-item>
-          <md-list-item class="md-3-line" ng-click="null">
+          <md-list-item class="md-3-line" ng-click="null" ng-repeat="game in h.games">
             <div class="md-avatar">
               <i class="fa fa-users fa-2x" aria-hidden="true"></i>
             </div>
@@ -41,6 +41,11 @@
               <h3>Grupo bla</h3>
               <h4>Descrição</h4>
               <p>30 membros</p>
+            </div>
+            <div class="md-list-item-text" layout="column">
+              <h3>{{game.name}}</h3>
+              <h4>{{game.description}}</h4>
+              <p>... object</p>
             </div>
           </md-list-item>
         </md-list>
